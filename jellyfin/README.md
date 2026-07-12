@@ -1,14 +1,4 @@
 ---
-type: 'Page'
-collections: 'Docker'
-title: Instalación Jellyfin En Docker (windows 10) – Docker RunDocker de Jellyfin
-aliases: null
-description: null
-icon: null
-createdAt: '2026-01-04T12:37:59.441Z'
-lastUpdated: '2026-02-15T16:57:25.120Z'
-tags: []
-imagenDePortada: null
 📺 Instalación de Jellyfin 10.11.5 en Docker (Windows 10)
 Esta documentación describe la instalación y configuración de Jellyfin 10.11.5 usando Docker Desktop en Windows 10.
 ---
