@@ -96,13 +96,13 @@ C:\Videos\Peliculas
 4. Selecciona el usuario
 5. Ve a Playback / Reproducción
 6. ❌ Desmarca:
-  * Allow video transcoding
-  * Allow audio transcoding
+* Allow video transcoding
+* Allow audio transcoding
 7. Guarda cambios
 
 ### 👉 Resultado
 * ✅ Direct Play → funciona
-*❌ Necesita transcode → NO reproduce
+* ❌ Necesita transcode → NO reproduce
 > 💡 Puedes hacerlo solo para ciertos usuarios (por ejemplo TVs).
 
 ### 📝 Notas finales
