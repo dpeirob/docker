@@ -41,8 +41,8 @@ Reinicia automáticamente el contenedor si Docker o Windows se reinician, except
 * `-p 8096:8096`
 
 Mapeo de puertos:
-* 8096 (host) → Acceso desde el navegador
-* 8096 (contenedor) → Servicio Jellyfin
+* **8096 (host)** → Acceso desde el navegador
+* **8096 (contenedor)** → Servicio Jellyfin
 
 Acceso web:
 ```text
@@ -70,7 +70,7 @@ Indica la imagen oficial de Jellyfin y la versión exacta utilizada.
 ## 🎬 Configuración de la biblioteca en Jellyfin
 Durante la configuración inicial:
 1. Añadir biblioteca
-2. Tipo: Películas
+2. Tipo: **Películas**
 3. Carpeta:
 ```text
 /media/peliculas
@@ -96,8 +96,8 @@ C:\Videos\Peliculas
 4. Selecciona el usuario
 5. Ve a Playback / Reproducción
 6. ❌ Desmarca:
-* Allow video transcoding
-* Allow audio transcoding
+  * Allow video transcoding
+  * Allow audio transcoding
 7. Guarda cambios
 
 ### 👉 Resultado
