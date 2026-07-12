@@ -1,7 +1,7 @@
 ---
 📺 Instalación de Jellyfin 10.11.5 en Docker (Windows 10)
-Esta documentación describe la instalación y configuración de Jellyfin 10.11.5 usando Docker Desktop en Windows 10.
 ---
+Esta documentación describe la instalación y configuración de Jellyfin 10.11.5 usando Docker Desktop en Windows 10.
 📋 Requisitos
 Windows 10
 Docker Desktop instalado y en ejecución
@@ -9,6 +9,7 @@ WSL2 habilitado
 Acceso al disco `C:` permitido en Docker Desktop
 ---
 📁 Estructura de carpetas en Windows
+---
 Se recomienda crear las siguientes carpetas en el sistema host:
 ```text
 C:\jellyfin\config
