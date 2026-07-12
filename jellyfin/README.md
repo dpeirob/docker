@@ -1,7 +1,7 @@
----
+Instalación Jellyfin En Docker (Windows 10) – Docker Run de Jellyfin
 📺 Instalación de Jellyfin 10.11.5 en Docker (Windows 10)
----
 Esta documentación describe la instalación y configuración de Jellyfin 10.11.5 usando Docker Desktop en Windows 10.
+---
 📋 Requisitos
 Windows 10
 Docker Desktop instalado y en ejecución
@@ -9,7 +9,6 @@ WSL2 habilitado
 Acceso al disco `C:` permitido en Docker Desktop
 ---
 📁 Estructura de carpetas en Windows
----
 Se recomienda crear las siguientes carpetas en el sistema host:
 ```text
 C:\jellyfin\config
@@ -21,7 +20,7 @@ Descripción
 `cache` → Caché y datos temporales
 `Peliculas` → Archivos de vídeo
 ---
-🐳  Creación del contenedor (docker run)
+🐳 Creación del contenedor (docker run)
 Ejecutar el siguiente comando desde PowerShell o CMD:
 ```powershell
 docker run -d \
@@ -35,21 +34,21 @@ docker run -d \
 ```
 ---
 ⚙️ Explicación de parámetros
--d
+`-d`
 Ejecuta el contenedor en segundo plano (modo detached).
---name jellyfin
+`--name jellyfin`
 Asigna el nombre `jellyfin` al contenedor.
---restart unless-stopped
+`--restart unless-stopped`
 Reinicia automáticamente el contenedor si Docker o Windows se reinician, excepto si fue detenido manualmente.
--p 8096:8096
+`-p 8096:8096`
 Mapeo de puertos:
-8096 (host) → Acceso desde el navegador
-8096 (contenedor) → Servicio Jellyfin
+a) 8096 (host) → Acceso desde el navegador
+b) 8096 (contenedor) → Servicio Jellyfin
 Acceso web:
 ```text
 http://localhost:8096
 ```
--v (volúmenes)
+`-v` (volúmenes)
 ```text
 -v C:/jellyfin/config:/config
 -v C:/jellyfin/cache:/cache
@@ -59,7 +58,7 @@ Host (Windows)	Contenedor	Uso
 `C:/jellyfin/config`	`/config`	Configuración
 `C:/jellyfin/cache`	`/cache`	Caché
 `C:/Videos/Peliculas`	`/media/peliculas`	Películas
-⚠️ Dentro de Jellyfin solo se usan rutas del contenedor.
+> ⚠️ Dentro de Jellyfin **solo se usan rutas del contenedor**.
 Imagen
 ```text
 jellyfin/jellyfin:10.11.5
@@ -79,12 +78,12 @@ Guardar y escanear
 📂 Estructura recomendada de películas
 ```text
 C:\Videos\Peliculas
- ├── Matrix (1999)
- │    └── Matrix (1999).mkv
- ├── Inception (2010)
- │    └── Inception (2010).mp4
- └── Avatar (2009)
-      └── Avatar (2009).mkv
+├── Matrix (1999)
+│   └── Matrix (1999).mkv
+├── Inception (2010)
+│   └── Inception (2010).mp4
+└── Avatar (2009)
+    └── Avatar (2009).mkv
 ```
 ---
 🚫 Bloquear transcodificación
@@ -101,7 +100,7 @@ Guarda cambios
 👉 Resultado
 ✅ Direct Play → funciona
 ❌ Necesita transcode → NO reproduce
-💡 Puedes hacerlo solo para ciertos usuarios (por ejemplo TVs).
+> 💡 Puedes hacerlo solo para ciertos usuarios (por ejemplo TVs).
 ---
 📝 Notas finales
 Docker Desktop debe estar en ejecución para que Jellyfin funcione
